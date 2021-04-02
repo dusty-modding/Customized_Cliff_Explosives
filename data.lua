@@ -1,1 +1,1 @@
-require("prototypes.recipe")
+require('prototypes.recipe')
