@@ -7,3 +7,5 @@ By default sets the following recipe:
 - Explosives: 1
 - Removes Empty Barrel
 - Grenade: 1
+
+This mod also modifies the tree nuke recipe, nothing is changed by default but settings are available to modify this recipe.
