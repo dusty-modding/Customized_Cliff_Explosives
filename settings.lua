@@ -1,29 +1,35 @@
-data:extend{
+data:extend({
   {
-    type = "int-setting",
-    name = "explosives_needed",
-    setting_type = "startup",
+    type = 'int-setting',
+    name = 'explosives_needed',
+    setting_type = 'startup',
     default_value = 1,
-    minimum_value = 0,
+    minimum_value = 1,
     maximum_value = 100,
-    order = "b"
+    order = 'b'
   },
   {
-    type = "int-setting",
-    name = "grenades_needed",
-    setting_type = "startup",
+    type = 'int-setting',
+    name = 'grenades_needed',
+    setting_type = 'startup',
     default_value = 1,
-    minimum_value = 0,
+    minimum_value = 1,
     maximum_value = 100,
-    order = "a"
+    order = 'a'
   },
   {
-    type = "int-setting",
-    name = "barrels_needed",
-    setting_type = "startup",
-    default_value = 0,
-    minimum_value = 0,
+    type = 'bool-settings',
+    name = 'require_barrels',
+    setting_type = 'startup',
+    default_value = false
+  },
+  {
+    type = 'int-setting',
+    name = 'barrels_needed',
+    setting_type = 'startup',
+    default_value = 1,
+    minimum_value = 1,
     maximum_value = 100,
-    order = "c"
+    order = 'd'
   }
-}
+})
