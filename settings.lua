@@ -18,7 +18,7 @@ data:extend({
     order = 'a'
   },
   {
-    type = 'bool-settings',
+    type = 'bool-setting',
     name = 'require_barrels',
     setting_type = 'startup',
     default_value = false
