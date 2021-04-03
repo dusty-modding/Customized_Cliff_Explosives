@@ -3,7 +3,7 @@ if (mods or script.active_mods)['Tree-Nuke'] then
     {
       type = 'recipe',
       subgroup = 'capsule',
-      name = 'Tree-Nuke',
+      name = 'tree-nuke',
       enabled = false,
       energy_required = 10,
       ingredients =
