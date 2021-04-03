@@ -9,5 +9,5 @@
     "base >= 1.0",
     "? Tree-Nuke"
   ],
-  "description": "Allows you to customize and tweak cliff explosives makes them cost 1 grenade and 1 explosive by default"
+  "description": "Allows you to customize and tweak cliff explosives makes them cost 1 grenade and 1 explosive by default, this also provides settings to tweak the Tree Nuke mod recipe but DOES NOT change it by default."
 }
