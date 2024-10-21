@@ -4,15 +4,16 @@ if (mods or script.active_mods)['Tree-Nuke'] then
       type = 'recipe',
       subgroup = 'capsule',
       name = 'tree-nuke',
+      category = 'crafting',
       enabled = false,
       energy_required = 10,
       ingredients =
       {
-        {'coal', settings.startup['tree_nuke_coal'].value},
-        {'sulfur', settings.startup['tree_nuke_sulfur'].value},
-        {'iron-plate', settings.startup['tree_nuke_plates'].value}
+        {type="item", name="coal", amount=settings.startup['tree_nuke_coal'].value},
+        {type="item", name="sulfur", amount=settings.startup['tree_nuke_sulfur'].value},
+        {type="item", name="iron-plates", amount=settings.startup['tree_nuke_plates'].value}
       },
-      result = 'tree-nuke'
+      result = {type="item", name="tree-nuke", amount=2}
     }
   })
 end

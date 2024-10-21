@@ -1,4 +1,13 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.0.0
+Date: 2021.4.01
+  Fixed:
+    - Mod now supports calcite option
+    - Calcite is optional in being required or not
+  Info:
+    - Upped compatability with factorio 2.0
+    - Made the mod depend on space age so that it loads after
+---------------------------------------------------------------------------------------------------
 Version: 0.1.0
 Date: 2021.4.01
   Info:

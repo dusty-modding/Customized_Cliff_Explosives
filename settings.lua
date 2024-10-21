@@ -18,8 +18,23 @@ data:extend({
     order = 'a'
   },
   {
+    type = 'int-setting',
+    name = 'calcite_needed',
+    setting_type = 'startup',
+    default_value = 1,
+    minimum_value = 1,
+    maximum_value = 100,
+    order = 'c'
+  },
+  {
     type = 'bool-setting',
     name = 'require_barrels',
+    setting_type = 'startup',
+    default_value = false
+  },
+  {
+    type = 'bool-setting',
+    name = 'require_calcite',
     setting_type = 'startup',
     default_value = false
   },

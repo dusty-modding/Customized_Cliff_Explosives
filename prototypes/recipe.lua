@@ -1,36 +1,30 @@
+ingredients =
+{
+  {type="item", name="explosives", amount=settings.startup['explosives_needed'].value},
+  {type="item", name="grenade", amount=settings.startup['grenades_needed'].value}
+}
+
 if settings.startup['require_barrels'].value == true then
-  data:extend(
-    {
-      {
-        type = 'recipe',
-        name = 'cliff-explosives',
-        enabled = false,
-        energy_required = 8,
-        ingredients =
-        {
-          {'explosives', settings.startup['explosives_needed'].value},
-          {'grenade', settings.startup['grenades_needed'].value},
-          {'empty-barrel', settings.startup['barrels_needed'].value}
-        },
-        result = 'cliff-explosives'
-      }
-    }
-  )
-else
-  data:extend(
-    {
-      {
-        type = 'recipe',
-        name = 'cliff-explosives',
-        enabled = false,
-        energy_required = 8,
-        ingredients =
-        {
-          {'explosives', settings.startup['explosives_needed'].value},
-          {'grenade', settings.startup['grenades_needed'].value}
-        },
-        result = 'cliff-explosives'
-      }
-    }
-  )
+  table.insert(ingredients, {type="item", name="empty-barrel", amount=settings.startup['barrels_needed'].value})
 end
+
+if settings.startup['require_calcite'].value == true and (mods or script.active_mods)['space-age'] then
+  table.insert(ingredients, {type="item", name="calcite", amount=settings.startup['calcite_needed'].value})
+end
+
+data:extend(
+  {
+    {
+      type = 'recipe',
+      name = 'cliff-explosives',
+      category = 'crafting',
+      enabled = true,
+      energy_required = 1,
+      ingredients = ingredients,
+      results =
+      {
+        {type="item", name="cliff-explosives", amount=2}
+      }
+    }
+  }
+)
